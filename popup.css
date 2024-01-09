@@ -1,20 +1,87 @@
 body {
-  width: 320px;
-  padding: 10px;
-  font-size: 20px;
+  width: 340px;
+  margin: 0;
+  font-size: 14px;
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    sans-serif;
 }
 
-#title {
+.inputs {
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  border: 1px solid blue;
+  outline: none;
+}
+
+input#title {
+  border: 1px solid black;
+  padding: 4px;
+  font-family: inherit;
+  font-size: inherit;
   width: 100%;
-  padding: 5px;
+  border-radius: 3px;
+}
+
+button {
+  font-family: inherit;
+  font-weight: bold;
+  background: black;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  padding: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.spacer {
+  height: 5px;
 }
 
 #images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 2px;
+  padding: 2px;
+  background: #eee;
+  overflow-y: auto;
+  max-height: 300px;
+  border-top: 1px solid #000;
+}
+
+.image-option {
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 5px;
+  width: 155px;
+}
+
+.image-option:has(input:checked) {
+  background: lightblue;
+  border: 1px solid darkblue;
 }
 
 .image-option img {
-  width: 155px;
+  height: 145px;
+  width: 145px;
+  -webkit-user-drag: none;
+  object-fit: contain;
+}
+
+.image-option .txt {
+  font-size: 11px;
+  white-space: pre;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
 }

@@ -1,9 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "In the are.na",
-  "description": "A fancier are.na adder",
+  "name": "unofficial-arena",
+  "description": "Unofficial are.na extension",
   "version": "1.0",
-
   "offline_enabled": true,
   "background": {
     "type": "module",
